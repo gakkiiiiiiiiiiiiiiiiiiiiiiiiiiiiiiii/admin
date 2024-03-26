@@ -1,5 +1,5 @@
 <template>
-  <Card title="转化率" :loading="loading">
+  <Card title="喷墨设备统计" :loading="loading">
     <div ref="chartRef" :style="{ width, height }"></div>
   </Card>
 </template>
@@ -31,7 +31,7 @@
       setOptions({
         legend: {
           bottom: 0,
-          data: ['访问', '购买'],
+          data: ['检测次数'],
         },
         tooltip: {},
         radar: {
@@ -39,22 +39,22 @@
           splitNumber: 8,
           indicator: [
             {
-              name: '电脑',
+              name: '设备1',
             },
             {
-              name: '充电器',
+              name: '设备2',
             },
             {
-              name: '耳机',
+              name: '设备3',
             },
             {
-              name: '手机',
+              name: '设备4',
             },
             {
-              name: 'Ipad',
+              name: '设备5',
             },
             {
-              name: '耳机',
+              name: '设备6',
             },
           ],
         },
@@ -72,18 +72,18 @@
             data: [
               {
                 value: [90, 50, 86, 40, 50, 20],
-                name: '访问',
+                name: '检测次数',
                 itemStyle: {
                   color: '#b6a2de',
                 },
               },
-              {
-                value: [70, 75, 70, 76, 20, 85],
-                name: '购买',
-                itemStyle: {
-                  color: '#5ab1ef',
-                },
-              },
+              // {
+              //   value: [70, 75, 70, 76, 20, 85],
+              //   name: '购买',
+              //   itemStyle: {
+              //     color: '#5ab1ef',
+              //   },
+              // },
             ],
           },
         ],
